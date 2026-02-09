@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 93%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 93%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 93%;
+
+    --primary: 0 0% 85%;
+    --primary-foreground: 0 0% 3%;
+
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 0 0% 78%;
+
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 70%;
+    --accent-foreground: 0 0% 3%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 0 0% 85%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gold: 0 0% 85%;
+    --gold-dim: 0 0% 40%;
+    --silver: 0 0% 65%;
+    --electric-blue: 0 0% 55%;
+    --electric-blue-dim: 0 0% 28%;
+    --glass: 0 0% 6%;
+    --glass-border: 0 0% 15%;
+    --marble-vein: 0 0% 16%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 93%;
+    --sidebar-primary: 0 0% 85%;
+    --sidebar-primary-foreground: 0 0% 3%;
+    --sidebar-accent: 0 0% 11%;
+    --sidebar-accent-foreground: 0 0% 93%;
+    --sidebar-border: 0 0% 13%;
+    --sidebar-ring: 0 0% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/30 backdrop-blur-2xl border border-glass-border/20 rounded-2xl;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 50px hsl(var(--gold) / 0.1), 0 0 100px hsl(var(--gold) / 0.03);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 50px hsl(var(--silver) / 0.08), 0 0 100px hsl(var(--silver) / 0.03);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(0 0% 95%), hsl(0 0% 60%), hsl(0 0% 95%));
+  }
+
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--silver)), hsl(0 0% 60%));
+  }
+
+  .heading-display {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .heading-sans {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+  }
+
+  .body-elegant {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+  }
+
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-24 py-24 md:py-32;
+  }
+}
+
+@layer utilities {
+  .particle-bg {
+    background-color: hsl(var(--background));
+    background-image: 
+      /* Marble veining - diagonal streaks */
+      linear-gradient(125deg, transparent 30%, hsl(var(--marble-vein) / 0.3) 30.5%, transparent 31%),
+      linear-gradient(135deg, transparent 55%, hsl(var(--marble-vein) / 0.15) 55.5%, transparent 56%),
+      linear-gradient(110deg, transparent 70%, hsl(var(--marble-vein) / 0.2) 70.3%, transparent 71%),
+      linear-gradient(145deg, transparent 15%, hsl(var(--marble-vein) / 0.1) 15.3%, transparent 16%),
+      linear-gradient(130deg, transparent 85%, hsl(var(--marble-vein) / 0.12) 85.2%, transparent 86%),
+      /* Subtle warm glow */
+      radial-gradient(ellipse at 30% 40%, hsl(var(--gold) / 0.02) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 60%, hsl(var(--silver) / 0.015) 0%, transparent 50%);
+  }
+}
