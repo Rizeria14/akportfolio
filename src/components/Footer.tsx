@@ -40,9 +40,6 @@ const Footer = () => {
             ))}
           </div>
 
-          <p className="text-muted-foreground/40 text-xs tracking-widest uppercase font-heading">
-            © 2025 · All rights reserved
-          </p>
         </motion.div>
       </div>
     </footer>
