@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const socials = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Mail, href: "#", label: "Email" },
+  { icon: Github, href: "https://github.com/Rizeria14", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/atharva-karbhari-876365363/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:cricatharva@gmail.com", label: "Email" },
 ];
 
 const Footer = () => {
