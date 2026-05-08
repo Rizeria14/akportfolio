@@ -47,6 +47,24 @@ const projects = [
     link: "/",
     icon: Code2,
   },
+  {
+  title: "TaskFlow — Smart Task Management System",
+  description:
+    "Full-stack task management web application built with Flask, PostgreSQL, WebSockets, Pandas, and NumPy featuring real-time task updates, authentication, analytics dashboard, and REST APIs.",
+  tech: [
+    "Python",
+    "Flask",
+    "PostgreSQL",
+    "Flask-SocketIO",
+    "Pandas",
+    "NumPy",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  link: "https://github.com/Rizeria14/TaskFlow",
+  icon: Code2,
+},
 ];
 
 const ProjectsSection = () => {
