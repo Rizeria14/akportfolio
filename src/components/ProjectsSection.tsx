@@ -1,7 +1,28 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, BrainCircuit, Globe, Code2 } from "lucide-react";
+import {
+  ArrowUpRight,
+  BrainCircuit,
+  Globe,
+  Code2,
+  LineChart,
+} from "lucide-react";
 
 const projects = [
+  {
+    title: "Binance Futures Testnet Trading Bot",
+    description:
+      "A modular Python trading bot built for Binance Futures Testnet with MARKET and LIMIT order execution, BUY/SELL support, CLI interaction, structured logging, validation, and secure API key handling.",
+    tech: [
+      "Python",
+      "Binance API",
+      "python-binance",
+      "CLI",
+      "Logging",
+    ],
+    link: "https://github.com/Rizeria14/TradeBot",
+    icon: LineChart,
+    featured: true,
+  },
   {
     title: "Nexus – Local AI Assistant",
     description:
@@ -9,7 +30,6 @@ const projects = [
     tech: ["Python", "Ollama", "Mistral", "RAG"],
     link: "https://github.com/Rizeria14/nexus-ai",
     icon: BrainCircuit,
-    featured: true,
   },
   {
     title: "EnchantScript – Poem Blog",
@@ -23,7 +43,7 @@ const projects = [
     title: "Portfolio Website",
     description:
       "Personal portfolio built with React and TypeScript to showcase projects, skills, and development work.",
-    tech: ["React", "TypeScript"],
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     link: "/",
     icon: Code2,
   },
@@ -45,6 +65,7 @@ const ProjectsSection = () => {
           <p className="text-muted-foreground tracking-[0.3em] uppercase text-xs mb-4">
             Projects
           </p>
+
           <h2 className="text-4xl md:text-5xl font-bold">
             What I’ve Built
           </h2>
@@ -60,10 +81,12 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`border rounded-xl p-6 transition-all duration-300 hover:scale-[1.02] 
-              ${project.featured 
-                ? "bg-zinc-900 border-zinc-700 shadow-[0_0_40px_rgba(255,255,255,0.05)] md:col-span-2" 
-                : "bg-zinc-900 border-zinc-800 hover:border-zinc-600"}`}
+              className={`border rounded-xl p-6 transition-all duration-300 hover:scale-[1.02]
+              ${
+                project.featured
+                  ? "bg-zinc-900 border-zinc-700 shadow-[0_0_40px_rgba(255,255,255,0.05)] md:col-span-2"
+                  : "bg-zinc-900 border-zinc-800 hover:border-zinc-600"
+              }`}
             >
 
               {/* Top */}
