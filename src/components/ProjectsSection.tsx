@@ -65,6 +65,23 @@ const projects = [
   link: "https://github.com/Rizeria14/TaskFlow",
   icon: Code2,
 },
+{
+  title: "Bangalore Pincode Explorer",
+  description:
+    "Full-stack postal intelligence web application built with React, Node.js, and Express featuring real-time pincode and locality search, India Post API integration, filtering, pagination, caching, rate limiting, and responsive UI design.",
+  tech: [
+    "React",
+    "Vite",
+    "Node.js",
+    "Express.js",
+    "JavaScript",
+    "CSS",
+    "Axios",
+    "REST API"
+  ],
+  link: "https://github.com/Rizeria14/PincodeExplorer",
+  icon: Code2,
+},
 ];
 
 const ProjectsSection = () => {
