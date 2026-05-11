@@ -82,6 +82,25 @@ const projects = [
   link: "https://github.com/Rizeria14/PincodeExplorer",
   icon: Code2,
 },
+{
+  title: "School Management API & Locator",
+  description:
+    "Full-stack school management web application built with Node.js, Express.js, and MySQL featuring school registration, nearby school discovery using the Haversine formula, REST API integration, input validation, error handling, responsive frontend UI, and live deployment on Render and Railway.",
+  tech: [
+    "Node.js",
+    "Express.js",
+    "MySQL",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "REST API",
+    "Render",
+    "Railway",
+    "Postman"
+  ],
+  link: "https://school-management-api-dhmj.onrender.com",
+  icon: Code2,
+},
 ];
 
 const ProjectsSection = () => {
